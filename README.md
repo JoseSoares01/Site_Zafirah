@@ -1,6 +1,7 @@
 
 ---
-![image](https://github.com/user-attachments/assets/3d6119a9-ab1e-41e1-a665-29797f501003)
+![image](https://github.com/user-attachments/assets/0df4522b-4a6a-432f-ae4f-8fef2865e4eb)
+
 
 
 # Zafirah Aromas - Arabic Perfume Sales Page
