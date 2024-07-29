@@ -129,3 +129,42 @@ img {
   min-height: 200vh; /* Define uma altura mínima de 200% da altura da viewport */
   object-fit: cover; /* Cobre todo o espaço do contêiner mantendo a proporção */
 }
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+footer .mascara-final {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background-color: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente */
+  color: white;
+}
+
+footer .mask-pattern .list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer .mask-pattern .list li {
+  margin-right: 20px; /* Espaçamento entre itens da lista */
+}
+
+footer .mask-pattern .list li p {
+  margin: 0; /* Remove margem dos parágrafos */
+}
+
+footer .mask-pattern .search,
+footer .mask-pattern .menu {
+  background: none;
+  border: none;
+  color: white;
+  filter: drop-shadow(0 0 5px rgba(0,0,0,.5));
+}
