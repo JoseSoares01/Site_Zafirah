@@ -62,13 +62,13 @@ a:focus {
 .list {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 10;
   display: flex;
 }
 
 /* Estilos para os itens da lista */
 .list li {
-  margin-left: 20px;
+  margin-left: 150px;
 }
 
 /* Estilos para o botão de busca */
@@ -78,7 +78,7 @@ a:focus {
   padding: 0;
   background: none;
   border: none;
-  margin-left: 500px;
+  margin-left: auto;
   filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
 }
 
