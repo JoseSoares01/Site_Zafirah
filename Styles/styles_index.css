@@ -138,7 +138,7 @@ footer .list li p {
 
 .home-button img {
   width: auto;
-  height: 40px; /* Altura do botão home */
+  height: 50px; /* Altura do botão home */
   transition: transform 0.3s, background-color 0.3s;
 }
 
