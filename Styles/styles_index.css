@@ -44,6 +44,7 @@ body {
   color: white;
   font-size: 16px;
   z-index: 10;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Estilos para links */
@@ -84,9 +85,9 @@ a:focus {
 .search::before {
   content: '';
   display: inline-block;
-  width: 2rem;
-  height: 2rem;
-  background: center/1.3rem 1.3rem no-repeat url("data:image/svg+xml, ...");
+  width: 40px;  /* Ajuste de largura */
+  height: 40px; /* Ajuste de altura */
+  background: center/contain no-repeat url("/imagens/search-521.png");
 }
 
 .menu::before {
@@ -137,7 +138,7 @@ footer .list li p {
 
 .home-button img {
   width: auto;
-  height: 40px; /* Ajuste o tamanho conforme necessário */
+  height: 40px; /* Altura do botão home */
   transition: transform 0.3s, background-color 0.3s;
 }
 
