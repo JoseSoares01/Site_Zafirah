@@ -130,7 +130,7 @@ footer .social-list li {
 /* Estilos para o texto do rodapé */
 footer .footer-text {
   margin: 0;
-  margin-left: 0; /* Fixado à esquerda */
+  margin-left: auto; /* Fixado à direita */
 }
 
 /* Estilos para o botão home */
