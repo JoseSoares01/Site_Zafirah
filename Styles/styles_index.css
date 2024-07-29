@@ -36,7 +36,16 @@ nav {
 
   /* Estilos adicionais para a classe "mask-pattern" */
   &.mask-pattern {
-    top: 300px; /* Define a posição top */
+    min-height: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 90px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 650px; /* Define a posição top */
     mask-image: url("data:image/svg+xml, ..."), linear-gradient(black calc(100% - 30px), transparent calc(100% - 30px)); /* Aplica uma imagem SVG e um gradiente como máscara */
     mask-size: auto 30px, 100% 100%; /* Define o tamanho das máscaras */
     mask-repeat: repeat-x, no-repeat; /* Define a repetição das máscaras */
@@ -187,3 +196,5 @@ footer .mask-pattern .menu {
 .home-button:active img {
   transform: scale(0.95);
 }
+
+
