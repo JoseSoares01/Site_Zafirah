@@ -5,150 +5,114 @@
 
 /* Estilos gerais para o corpo da página */
 body {
-  margin: 0; /* Remove a margem padrão */
-  min-height: 200vh; /* Define uma altura mínima de 200% da altura da viewport */
-  font-size: 5; /* Define o tamanho da fonte como 0, escondendo o texto */
-  font-family: Helvetica, Verdana, sans-serif; /* Define a família de fontes */
+  margin: 0;
+  font-family: Helvetica, Verdana, sans-serif;
 }
 
-/* Estilos para a barra de navegação */
-nav {
-  position: fixed; /* Fixa a navegação no topo da página */
+/* Estilos para a barra de navegação superior */
+.top-nav {
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%; /* Ocupa toda a largura da tela */
-  padding: 16px 20px 30px 20px; /* Define o preenchimento interno */
-  display: flex; /* Exibe os itens em um layout flexível */
-  align-items: center; /* Alinha os itens ao centro verticalmente */
-  transition: 0.3s ease-out; /* Adiciona uma transição suave */
-  backdrop-filter: blur(8px) brightness(1.2); /* Adiciona efeito de desfoque e brilho */
-  -webkit-backdrop-filter: blur(8px) brightness(1.2); /* Adiciona o efeito para navegadores WebKit */
-  text-shadow: 0 0 5px rgba(0,0,0,0.5); /* Adiciona sombra ao texto */
-  color: white; /* Define a cor do texto */
-  font-size: 16px; /* Define o tamanho da fonte */
-
-  /* Estilos adicionais para a classe "mask" */
-  &.mask {
-    top: 150px; /* Define a posição top */
-    mask-image: linear-gradient(black 70%, transparent); /* Aplica um gradiente como máscara */
-    -webkit-mask-image: linear-gradient(black 70%, transparent); /* Aplica a máscara para navegadores WebKit */
-  }
-
-  /* Estilos adicionais para a classe "mask-pattern" */
-  &.mask-pattern {
-    min-height: 100%;
-    height: 100%;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 90px;
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    top: 650px; /* Define a posição top */
-    mask-image: url("data:image/svg+xml, ..."), linear-gradient(black calc(100% - 30px), transparent calc(100% - 30px)); /* Aplica uma imagem SVG e um gradiente como máscara */
-    mask-size: auto 30px, 100% 100%; /* Define o tamanho das máscaras */
-    mask-repeat: repeat-x, no-repeat; /* Define a repetição das máscaras */
-    mask-position: left bottom, top left; /* Define a posição das máscaras */
-
-    -webkit-mask-image: url("data:image/svg+xml, ..."), linear-gradient(black calc(100% - 30px), transparent calc(100% - 30px)); /* Aplica a máscara para navegadores WebKit */
-    -webkit-mask-size: auto 30px, 100% 100%; /* Define o tamanho das máscaras para navegadores WebKit */
-    -webkit-mask-repeat: repeat-x, no-repeat; /* Define a repetição das máscaras para navegadores WebKit */
-    -webkit-mask-position: left bottom, top left; /* Define a posição das máscaras para navegadores WebKit */
-  }
-
-  /* Estilos para quando a largura da tela for maior que 640px */
-  @media (min-width: 640px) {
-    padding: 16px 50px 30px 50px; /* Ajusta o preenchimento interno */
-  }
+  width: 100%;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  transition: 0.3s ease-out;
+  backdrop-filter: blur(8px) brightness(1.2);
+  -webkit-backdrop-filter: blur(8px) brightness(1.2);
+  text-shadow: 0 0 5px rgba(0,0,0,0.5);
+  color: white;
+  font-size: 16px;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Estilos para a classe "is-hidden" em nav */
-nav.is-hidden {
-  transform: translateY(-100%); /* Move a navegação para fora da tela na vertical */
+/* Estilos para a barra de navegação inferior */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  transition: 0.3s ease-out;
+  backdrop-filter: blur(8px) brightness(1.2);
+  -webkit-backdrop-filter: blur(8px) brightness(1.2);
+  text-shadow: 0 0 5px rgba(0,0,0,0.5);
+  color: white;
+  font-size: 16px;
+  z-index: 10;
 }
 
 /* Estilos para links */
 a {
-  color: inherit; /* Herda a cor do elemento pai */
-  text-decoration: none; /* Remove a decoração do texto (sublinhado) */
-  &:hover,
-  &:focus {
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse ou focar no link */
-  }
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
 }
 
 /* Estilos para a lista de navegação */
 .list {
-  list-style-type: none; /* Remove os marcadores da lista */
-  margin-left: auto; /* Empurra a lista para a direita */
-  display: none; /* Esconde a lista */
-  @media (min-width: 640px) {
-    display: flex; /* Exibe a lista em layout flexível */
-  }
-  
-  /* Estilos para os itens da lista */
-  li {
-    margin-left: 20px; /* Adiciona margem à esquerda dos itens */
-  }
-}
-
-/* Estilos para o campo de busca */
-.search {
-  display: inline-block; /* Exibe o campo como um bloco em linha */
+  list-style-type: none;
+  margin: 0;
   padding: 0;
-  font-size: 0; /* Define o tamanho da fonte como 0 */
-  background: none; /* Remove o fundo */
-  border: none; /* Remove a borda */
-  margin-left: auto; /* Empurra o campo para a direita */
-  filter: drop-shadow(0 0 5px rgba(0,0,0,.5)); /* Adiciona sombra ao campo */
-  @media (min-width: 640px) {
-    margin-left: 20px; /* Adiciona margem à esquerda */
-  }
-  
-  &::before {
-    content: ''; /* Adiciona um conteúdo vazio */
-    display: inline-block; /* Exibe como um bloco em linha */
-    width: 2rem; /* Define a largura */
-    height: 2rem; /* Define a altura */
-    background: center/1.3rem 1.3rem no-repeat url("data:image/svg+xml, ..."); /* Define a imagem de fundo */
-  }
+  display: flex;
 }
 
-/* Estilos para o botão de menu */
+/* Estilos para os itens da lista */
+.list li {
+  margin-left: 20px;
+}
+
+/* Estilos para o botão de busca */
+.search,
 .menu {
-  display: inline-block; /* Exibe o botão como um bloco em linha */
+  display: inline-block;
   padding: 0;
-  font-size: 0; /* Define o tamanho da fonte como 0 */
-  background: none; /* Remove o fundo */
-  border:  none; /* Remove a borda */
-  margin-left: 20px; /* Adiciona margem à esquerda */
-  filter: drop-shadow(0 0 5px rgba(0,0,0,.5)); /* Adiciona sombra ao botão */
-  &::before {
-    content: url("data:image/svg+xml, ..."); /* Adiciona a imagem SVG antes do conteúdo */
-  }
-  @media (min-width: 640px) {
-    display: none; /* Esconde o botão em telas maiores */
-  }
+  background: none;
+  border: none;
+  margin-left: 20px;
+  filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
+}
+
+.search::before {
+  content: '';
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background: center/1.3rem 1.3rem no-repeat url("data:image/svg+xml, ...");
+}
+
+.menu::before {
+  content: url("data:image/svg+xml, ...");
 }
 
 /* Estilos para imagens */
 img {
-  width: 100%; /* Define a largura como 100% do elemento pai */
-  min-height: 200vh; /* Define uma altura mínima de 200% da altura da viewport */
-  object-fit: cover; /* Cobre todo o espaço do contêiner mantendo a proporção */
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
+
+/* Estilos para o rodapé */
 footer {
-  position: flex;
+  position: fixed;
   bottom: 0;
   width: 100%;
   align-items: center;
   padding: 16px 20px;
-  background-color: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente */
+  background-color: rgba(0, 0, 0, 0.8);
   color: white;
 }
 
-footer .mask-pattern .list {
+/* Estilos para a lista de navegação no rodapé */
+footer .list {
   display: flex;
   align-items: center;
   list-style: none;
@@ -156,36 +120,24 @@ footer .mask-pattern .list {
   padding: 0;
 }
 
-footer .mask-pattern .list li {
-  margin-right: 20px; /* Espaçamento entre itens da lista */
+footer .list li {
+  margin-right: 20px;
 }
 
-footer .mask-pattern .list li p {
-  margin: 0; /* Remove margem dos parágrafos */
-}
-
-footer .mask-pattern .search,
-footer .mask-pattern .menu {
-  background: none;
-  border: none;
-  color: white;
-  filter: drop-shadow(0 0 5px rgba(0,0,0,.5));
+footer .list li p {
+  margin: 0;
 }
 
 .home-button {
-  position: fixed;
-  top: 20px;
-  left: 20px;
   background-color: transparent;
-  border: 16px;
+  border: none;
   cursor: pointer;
   transition: transform 0.3s;
 }
 
 .home-button img {
-  width: 50%; /* Ajuste o tamanho conforme necessário */
-  height: auto;
-  border:  16px;
+  width: auto;
+  height: 40px; /* Ajuste o tamanho conforme necessário */
   transition: transform 0.3s, background-color 0.3s;
 }
 
@@ -197,4 +149,18 @@ footer .mask-pattern .menu {
   transform: scale(0.95);
 }
 
+/* Estilos para garantir que a imagem de fundo mantenha a proporção */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 68px); /* Ajuste este valor de acordo com a altura das barras de navegação */
+  overflow: hidden;
+}
 
+main img {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  object-fit: cover;
+}
