@@ -36,6 +36,7 @@ body {
   width: 100%;
   padding: 16px 20px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   transition: 0.3s ease-out;
   backdrop-filter: blur(8px) brightness(1.2);
@@ -68,7 +69,7 @@ a:focus {
 
 /* Estilos para os itens da lista */
 .list li {
-  margin-left: 200px;
+  margin-left: 20px;
 }
 
 /* Estilos para o botão de busca */
@@ -96,7 +97,7 @@ a:focus {
 
 /* Estilos para imagens */
 img {
-  width: 200%;
+  width: 100%;
   height: auto;
   object-fit: cover;
 }
@@ -113,22 +114,26 @@ footer {
 }
 
 /* Estilos para a lista de navegação no rodapé */
-footer .list {
-  display: fixed;
+footer .social-list {
+  display: flex;
   align-items: center;
   list-style: none;
-  margin: 1;
+  margin: 0;
   padding: 0;
 }
 
-footer .list li {
+/* Estilos para os itens da lista de navegação no rodapé */
+footer .social-list li {
   margin-right: 20px;
 }
 
-footer .list li p {
+/* Estilos para o texto do rodapé */
+footer .footer-text {
   margin: 0;
+  margin-left: 0; /* Fixado à esquerda */
 }
 
+/* Estilos para o botão home */
 .home-button {
   background-color: transparent;
   border: none;
