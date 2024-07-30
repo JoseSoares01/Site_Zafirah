@@ -50,8 +50,8 @@ header {
 }
 
 .nav-buttons {
-    display: flex; /* Define o display como flexbox */
-    align-items: center; /* Alinha os itens ao centro */
+    display: fixed; /* Define o display como flexbox */
+    align-items: left; /* Alinha os itens ao centro */
 }
 
 .nav-buttons button {
@@ -61,7 +61,7 @@ header {
     margin: 0 10px; /* Margem entre os botões */
     cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
     font-size: 16px; /* Tamanho da fonte */
-    position: relative; /* Posição relativa */
+    position: left; /* Posição relativa */
 }
 
 .dropdown-content {
