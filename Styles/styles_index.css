@@ -1,141 +1,243 @@
-/* Define que o box-sizing será border-box para todos os elementos */
-* {
-  box-sizing: border-box;
-}
-
-/* Estilos gerais para o corpo da página */
 body {
-  margin: 0;
-  font-family: Helvetica, Verdana, sans-serif;
+    margin: 0; /* Remove a margem padrão do corpo */
+    font-family: 'Muli', sans-serif; /* Define a fonte do texto para 'Muli' */
+    -webkit-box-sizing: border-box; /* Define o comportamento de box-sizing para bordas no Safari/Chrome */
+    box-sizing: border-box; /* Define o comportamento de box-sizing para bordas em todos os navegadores */
+    overflow-x: hidden; /* Esconde o overflow horizontal */
 }
 
-/* Estilos para a barra de navegação superior */
-.top-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 16px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* Distribui os itens com espaço entre eles */
-  transition: 0.3s ease-out;
-  backdrop-filter: rgb(8px) brightness(1.2);
-  -webkit-backdrop-filter: blur(8px) brightness(1.2);
-  text-shadow: 0 0 5px rgba(238, 236, 236, 0.5);
-  color: rgb(6, 6, 6);
-  font-size: 16px;
-  z-index: 10;
-  background-color: rgba(220, 218, 214, 0.8);
+.background {
+    background: url('/imagens/backgroud-fundo.jpg') center top no-repeat #8083a3; /* Define a imagem de fundo, posição e cor de fundo */
+    background-size: cover; /* Ajusta a imagem para cobrir todo o fundo */
+    display: block; /* Define o display como bloco */
+    width: 100%; /* Largura completa */
+    height: 1000px; /* Altura fixa */
+    position: absolute; /* Posição absoluta */
+    z-index: 0; /* Define a profundidade do elemento */
+    top: 0; /* Posiciona no topo */
+    left: 0; /* Posiciona na esquerda */
 }
 
-/* Estilos para a lista de navegação */
-.list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
+.background-texture {
+    background: -webkit-gradient(linear, left bottom, left top, from(#c3c1cde6), to(rgba(148, 209, 95, 0.9))); /* Gradiente de fundo para Safari/Chrome */
+    background: linear-gradient(to top, #0f0140e6, rgba(79, 207, 197, 0.9)); /* Gradiente de fundo para outros navegadores */
+    background-size: 100%; /* Ajusta a imagem para cobrir todo o fundo */
+    width: 100%; /* Largura completa */
+    height: 1000px; /* Altura fixa */
+    position: absolute; /* Posição absoluta */
+    z-index: 0; /* Define a profundidade do elemento */
+    top: auto; /* Posiciona no topo */
+    left: auto; /* Posiciona na esquerda */
 }
 
-/* Estilos para os itens da lista */
-.list li {
-  margin-left: 20px;
+header {
+    background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo semi-transparente */
+    color: white; /* Cor do texto branca */
+    padding: 15px 650px; /* Espaçamento interno */
+    display: flex; /* Define o display como flexbox */
+    justify-content: space-between; /* Espaça os itens uniformemente */
+    align-items: center; /* Alinha os itens ao centro */
+    z-index: 1; /* Define a profundidade do elemento */
+    position: relative; /* Posição relativa */
 }
 
-/* Estilos para o botão de busca e menu */
-.search, .menu {
-  display: inline-block;
-  padding: 0;
-  background: none;
-  border: none;
-  filter: drop-shadow(0 0 5px rgba(243, 238, 238, 0.5));
+.navbar .name-btn {
+    background: none; /* Sem fundo */
+    border: none; /* Sem borda */
+    color: white; /* Cor do texto branca */
+    font-size: 18px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
 }
 
-.search:before {
-  content: '';
-  display: inline-block;
-  width: 40px;  /* Ajuste de largura */
-  height: 40px; /* Ajuste de altura */
-  background: center/contain no-repeat url("/imagens/search-521.png");
+.nav-buttons {
+    display: flex; /* Define o display como flexbox */
+    align-items: center; /* Alinha os itens ao centro */
 }
 
-.menu::before {
-  content: url("data:image/svg+xml, ...");
+.nav-buttons button {
+    background: none; /* Sem fundo */
+    border: none; /* Sem borda */
+    color: white; /* Cor do texto branca */
+    margin: 0 10px; /* Margem entre os botões */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    font-size: 16px; /* Tamanho da fonte */
+    position: relative; /* Posição relativa */
 }
 
-/* Estilos para imagens */
-img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+.dropdown-content {
+    display: none; /* Esconde o dropdown inicialmente */
+    position: absolute; /* Posição absoluta */
+    background-color: white; /* Cor de fundo branca */
+    min-width: 160px; /* Largura mínima */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Sombra para o dropdown */
+    z-index: 1; /* Define a profundidade do elemento */
+    top: 30px; /* Posição de 30px do topo */
 }
 
-/* Estilos para o rodapé */
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  display: flex; /* Adicionado para alinhar os itens */
-  justify-content: space-between; /* Distribui os itens do rodapé */
-  align-items: center;
-  padding: 20px;
-  background-color: rgba(239, 231, 231, 0.8);
-  color: rgb(6, 6, 6);
+.dropdown-content a {
+    color: black; /* Cor do texto preta */
+    padding: 12px 16px; /* Espaçamento interno */
+    text-decoration: none; /* Remove sublinhado */
+    display: block; /* Display como bloco */
 }
 
-/* Estilos para a lista de navegação no rodapé */
-footer .social-list {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.dropdown-content a:hover {
+    background-color: #29713f; /* Cor de fundo ao passar o mouse no dropdown */
 }
 
-/* Estilos para os itens da lista de navegação no rodapé */
-footer .social-list li {
-  margin-right: 20px;
+.dropdown:hover .dropdown-content {
+    display: block; /* Mostra o dropdown ao passar o mouse */
 }
 
-/* Estilos para o texto do rodapé */
-footer .footer-text {
-  margin: 0;
+.search-btn img {
+    width: 20px; /* Largura da imagem */
+    height: 20px; /* Altura da imagem */
 }
 
-/* Estilos para o botão home */
-.home-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s;
+.carousel {
+    width: 100%; /* Largura completa */
+    overflow-x: scroll; /* Permite rolagem horizontal */
+    padding: 30px; /* Espaçamento interno */
+    padding-top: 80px; /* Espaçamento superior */
+    position: relative; /* Posição relativa */
+    -webkit-box-sizing: border-box; /* Define o comportamento de box-sizing para bordas no Safari/Chrome */
+    box-sizing: border-box; /* Define o comportamento de box-sizing para bordas em todos os navegadores */
 }
 
-.home-button img {
-  width: 100px;  /* Ajuste de largura */
-  height: 100px; /* Ajuste de altura */
-  transition: transform 0.3s, background-color 0.3s;
+.carousel__container {
+    white-space: nowrap; /* Impede quebra de linha */
+    margin: 70px 0px; /* Margem superior e inferior */
+    padding-bottom: 10px; /* Espaçamento interno inferior */
+    display: inline-block; /* Display como bloco inline */
 }
 
-.home-button:hover img {
-  transform: scale(1.05);
+.categories__title {
+    color: rgb(77, 55, 102); /* Cor do texto */
+    font-size: 28px; /* Tamanho da fonte */
+    position: absolute; /* Posição absoluta */
+    padding-left: 30px; /* Espaçamento interno esquerdo */
 }
 
-.home-button:active img {
-  transform: scale(0.95);
+.carousel-item {
+    width: 200px; /* Largura do item */
+    height: 250px; /* Altura do item */
+    border-radius: 20px; /* Borda arredondada */
+    background-color: #95bcd6; /* Cor de fundo */
+    overflow: hidden; /* Esconde overflow */
+    margin-right: 10px; /* Margem direita */
+    margin-top: 25px; /* Margem superior */
+    display: inline-block; /* Display como bloco inline */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    -webkit-transition: 1000ms all; /* Transição suave no Safari/Chrome */
+    transition: 1000ms all; /* Transição suave */
+    -webkit-transform-origin: center left; /* Origem de transformação no Safari/Chrome */
+    transform-origin: center left; /* Origem de transformação */
+    position: relative; /* Posição relativa */
 }
 
-/* Estilos para garantir que a imagem de fundo mantenha a proporção */
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: calc(100vh - 68px); /* Ajuste este valor de acordo com a altura das barras de navegação */
-  overflow: hidden;
+.carousel-item:hover ~ .carousel-item {
+    -webkit-transform: translate3d(100px, 0, 0); /* Translada o item no Safari/Chrome */
+    transform: translate3d(100px, 0, 0); /* Translada o item */
 }
 
-main img {
-  width: 100%;
-  height: auto;
-  min-height: 100%;
-  object-fit: cover;
+.carousel__container:hover .carousel-item {
+    opacity: 0.3; /* Define opacidade dos itens */
+}
+
+.carousel__container:hover .carousel-item:hover {
+    -webkit-transform: scale(1.5); /* Aumenta o item no Safari/Chrome */
+    transform: scale(1.5); /* Aumenta o item */
+    opacity: 1; /* Define opacidade do item */
+}
+
+.carousel-item__img {
+    width: 200px; /* Largura da imagem */
+    height: 250px; /* Altura da imagem */
+    -o-object-fit: cover; /* Ajuste da imagem no Opera */
+    object-fit: cover; /* Ajuste da imagem */
+}
+
+/* Estilizando a barra de rolagem */
+.scrollbar-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    box-sizing: border-box;
+}
+
+.carousel__scrollbar {
+    width: 100%;
+    height: 20px;
+    display: flex;
+}
+
+.carousel__container {
+    width: calc(200px * 5); /* Ajuste conforme necessário */
+}
+
+.carousel__scrollbar::after {
+    content: '';
+    width: calc(200px * 5); /* Ajuste conforme necessário */
+}
+
+.carousel-item__details {
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0))); /* Gradiente de fundo para Safari/Chrome */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%); /* Gradiente de fundo para outros navegadores */
+    font-size: 10px; /* Tamanho da fonte */
+    opacity: 0; /* Opacidade inicial */
+    -webkit-transition: 350ms opacity; /* Transição suave de opacidade no Safari/Chrome */
+    transition: 100ms opacity; /* Transição suave de opacidade */
+    padding: 10px; /* Espaçamento interno */
+    position: absolute; /* Posição absoluta */
+    top: 0; /* Posiciona no topo */
+    left: 0; /* Posiciona na esquerda */
+    right: 0; /* Posiciona na direita */
+    bottom: 0; /* Posiciona na base */
+}
+
+.carousel-item__details:hover {
+    opacity: 1; /* Define opacidade ao passar o mouse */
+}
+
+.carousel-item__details span {
+    font-size: 0.9rem; /* Tamanho da fonte */
+    color: #2ecc71; /* Cor do texto */
+}
+
+.carousel-item__details .controls {
+    padding-top: 200px; /* Espaçamento superior */
+}
+
+.carousel-item__details .carousel-item__details--title,
+.carousel-item__details--subtitle {
+    color: #fff; /* Cor do texto branca */
+    margin: 5px 0; /* Margem superior e inferior */
+}
+
+.footer-bar {
+    background-color: rgba(19, 95, 63, 0.529); /* Cor de fundo semi-transparente */
+    color: white; /* Cor do texto branca */
+    display: flex; /* Define o display como flexbox */
+    justify-content: flex-start; /* Alinha os itens no início */
+    padding: 10px 20px; /* Espaçamento interno */
+    position: relative; /* Posição relativa */
+    bottom: -650px; /* Define posição da barra inferior */
+    z-index: 1; /* Define a profundidade do elemento */
+}
+
+.social-btn {
+    color: rgb(236, 235, 235); /* Cor do texto branco barra inferior */
+    text-decoration: none; /* Remove sublinhado */
+    margin-right: 20px; /* Margem direita */
+}
+
+@media screen and (max-width: 768px) {
+    .card-container {
+        flex-direction: column; /* Alinha os itens em coluna */
+        align-items: center; /* Centraliza os itens */
+    }
 }

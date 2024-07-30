@@ -4,34 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zafirah Aromas</title>
-    <link rel="stylesheet" href="/Styles/styles_index.css">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- Cabeçalho principal -->
+    <div class="background"></div>
+    <div class="background-texture"></div>
+
     <header>
-        <nav class="top-nav">
-            <a href="/index.html" class="home-button"><img src="/imagens/button-home.png" alt="Home"></a>
-            <ul class="list">
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Produtos</a></li>
-                <li><a href="#">Perfumaria</a></li>
-                <li><a href="#">Contactos</a></li>
-            </ul>
-            <button class="search"></button>
-        </nav>
+        <div class="navbar">
+            <button class="name-btn">Nome</button>
+            <div class="nav-buttons">
+                <button>Sobre</button>
+                <button>Produtos</button>
+                <div class="dropdown">
+                    <button class="dropbtn">Perfumes</button>
+                    <div class="dropdown-content">
+                        <a href="#">Árabes</a>
+                        <a href="#">Nacionais</a>
+                    </div>
+                </div>
+                <button>Contacto</button>
+                <button class="search-btn"><img src="/imagens/button-search.png" alt="Buscar"></button>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <img src="/imagens/fundo.jpg" alt="Fundo">
-    </main>
+    <section class="carousel">
+        <h2 class="categories__title">Catalogo Zafirah</h2>
+        <div class="carousel__container">
+            <div class="carousel-item">
+                <img class="carousel-item__img" src="https://encurtador.com.br/LUGPu" alt="people" />
+                <div class="carousel-item__details">
+                    <div class="controls">
+                        <span class="fas fa-play-circle"></span>
+                        <span class="fas fa-plus-circle"></span>
+                    </div>
+                    <h5 class="carousel-item__details--title">Lattaf</h5>
+                    <h6 class="carousel-item__details--subtitle">Date and Duration</h6>
+                </div>
+            </div>
+            <!-- Parece que os divs de .carousel__container não estão fechando corretamente, vamos corrigir isso -->
+            <div class="carousel-item">
+                <img class="carousel-item__img" src="https://encurtador.com.br/kze8u" alt="people" />
+                <div class="carousel-item__details">
+                    <div class="controls">
+                        <span class="fas fa-play-circle"></span>
+                        <span class="fas fa-plus-circle"></span>
+                    </div>
+                    <h5 class="carousel-item__details--title">Descriptive Title</h5>
+                    <h6 class="carousel-item__details--subtitle">Date and Duration</h6>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="carousel-item__img" src="https://http2.mlstatic.com/D_NQ_NP_827255-MLU74913481146_032024-O.webp" alt="people" />
+                <div class="carousel-item__details">
+                    <div class="controls">
+                        <span class="fas fa-play-circle"></span>
+                        <span class="fas fa-plus-circle"></span>
+                    </div>
+                    <h5 class="carousel-item__details--title">Descriptive Title</h5>
+                    <h6 class="carousel-item__details--subtitle">Date and Duration</h6>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="carousel-item__img" src="https://encurtador.com.br/kO7w4" alt="people" />
+                <div class="carousel-item__details">
+                    <div class="controls">
+                        <span class="fas fa-play-circle"></span>
+                        <span class="fas fa-plus-circle"></span>
+                    </div>
+                    <h5 class="carousel-item__details--title">Descriptive Title</h5>
+                    <h6 class="carousel-item__details--subtitle">Date and Duration</h6>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="carousel-item__img" src="https://encurtador.com.br/5jYdA" alt="people" />
+                <div class="carousel-item__details">
+                    <div class="controls">
+                        <span class="fas fa-play-circle"></span>
+                        <span class="fas fa-plus-circle"></span>
+                    </div>
+                    <h5 class="carousel-item__details--title">Descriptive Title</h5>
+                    <h6 class="carousel-item__details--subtitle">Date and Duration</h6>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Rodapé -->
+    <!-- Contêiner extra para a barra de rolagem -->
+    <div class="scrollbar-container">
+        <div class="carousel__scrollbar">
+            <!-- Elemento vazio para ativar a barra de rolagem -->
+        </div>
+    </div>
+
     <footer>
-        <ul class="social-list">
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">TikTok</a></li>
-        </ul>
-        <p class="footer-text">&reg; Zafirah Aromas PT</p>
+        <div class="footer-bar">
+            <a href="https://www.facebook.com" target="_blank" class="social-btn" id="facebook">Facebook</a>
+            <a href="https://www.instagram.com" target="_blank" class="social-btn" id="instagram">Instagram</a>
+        </div>
     </footer>
+
+    <script src="/java/javascript.js"></script>
 </body>
 </html>
