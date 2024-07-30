@@ -82,7 +82,7 @@ header {
 }
 
 .dropdown-content a:hover {
-    background-color: #29713f; /* Cor de fundo ao passar o mouse no dropdown */
+    background-color: #bcd5c3; /* Cor de fundo ao passar o mouse no dropdown */
 }
 
 .dropdown:hover .dropdown-content {
@@ -112,7 +112,7 @@ header {
 }
 
 .categories__title {
-    color: rgb(77, 55, 102); /* Cor do texto */
+    color: rgb(100, 97, 103); /* Cor do texto */
     font-size: 28px; /* Tamanho da fonte */
     position: absolute; /* Posição absoluta */
     padding-left: 30px; /* Espaçamento interno esquerdo */
@@ -205,7 +205,7 @@ header {
 
 .carousel-item__details span {
     font-size: 0.9rem; /* Tamanho da fonte */
-    color: #2ecc71; /* Cor do texto */
+    color: #4ed888; /* Cor do texto */
 }
 
 .carousel-item__details .controls {
@@ -219,8 +219,8 @@ header {
 }
 
 .footer-bar {
-    background-color: rgba(19, 95, 63, 0.529); /* Cor de fundo semi-transparente */
-    color: white; /* Cor do texto branca */
+    background-color: rgba(255, 255, 255, 0.529); /* Cor de fundo semi-transparente */
+    color: rgb(245, 240, 240); /* Cor do texto branca */
     display: flex; /* Define o display como flexbox */
     justify-content: flex-start; /* Alinha os itens no início */
     padding: 10px 20px; /* Espaçamento interno */
@@ -230,7 +230,7 @@ header {
 }
 
 .social-btn {
-    color: rgb(236, 235, 235); /* Cor do texto branco barra inferior */
+    color: rgb(7, 7, 7); /* Cor do texto branco barra inferior */
     text-decoration: none; /* Remove sublinhado */
     margin-right: 20px; /* Margem direita */
 }
