@@ -7,8 +7,8 @@ body {
 }
 
 .background {
-    background: url('/imagens/backgroud-fundo.jpg') center top no-repeat #8083a3; /* Define a imagem de fundo, posição e cor de fundo */
-    background-size: cover; /* Ajusta a imagem para cobrir todo o fundo */
+    background: url('/imagens/black-white-background.jpg') center top no-repeat #8083a3; /* Define a imagem de fundo, posição e cor de fundo */
+    background-size: cover; /* Ajusta a imagem para cobrir todo o fundo jpge */
     display: block; /* Define o display como bloco */
     width: 100%; /* Largura completa */
     height: 200%; /* Altura fixa */
@@ -21,7 +21,7 @@ body {
 .background-texture {
     background: -webkit-gradient(linear, left bottom, left top, from(#e2dff1e6), to(rgba(250, 251, 249, 0.9))); /* Gradiente de fundo para Safari/Chrome */
     /* Gradiente de fundo para outros navegadores */
-    background-size: 100%; /* Ajusta a imagem para cobrir todo o fundo */
+    background-size: 100%; /* Ajusta a imagem para cobrir todo o fundo que cobre o jpge */
     width: 100%; /* Largura completa */
     height: 200%; /* Altura fixa */
     position: absolute; /* Posição absoluta */
@@ -32,7 +32,7 @@ body {
 }
 
 header {
-    background-color: rgba(255, 255, 255, 0.7); /* Cor de fundo semi-transparente */
+    background-color: rgba(255, 255, 255, 0.5); /* Cor de fundo semi-transparente */
     color: rgb(0, 0, 0); /* Cor do texto branca */
     padding: 15px 650px; /* Espaçamento interno */
     display: flex; /* Define o display como flexbox */
