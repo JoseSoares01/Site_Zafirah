@@ -45,7 +45,7 @@ header {
 .navbar .name-btn {
     background: none; /* Sem fundo */
     border: none; /* Sem borda */
-    color: rgb(198, 55, 55); /* Cor do texto branca */
+    color: rgb(198, 55, 55); /* Cor do texto */
     font-size: 18px; /* Tamanho da fonte */
     cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
 }
@@ -59,10 +59,13 @@ header {
     background: none; /* Sem fundo */
     border: none; /* Sem borda */
     color: rgb(8, 8, 8); /* Cor do texto branca */
-    margin: 0 10px; /* Margem entre os botões */
+    margin: -10rem; /* Margem entre os botões */
     cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
     font-size: 16px; /* Tamanho da fonte */
-    position: left; /* Posição relativa */
+    position: relative; /* Posição relativa */
+    justify-content: left;
+    gap: 80px;
+
 }
 
 .dropdown-content {
