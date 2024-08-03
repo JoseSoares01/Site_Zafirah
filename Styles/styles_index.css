@@ -36,7 +36,7 @@ header {
     color: rgb(0, 0, 0); /* Cor do texto branca */
     padding: 15px 650px; /* Espaçamento interno */
     display: flex; /* Define o display como flexbox */
-    justify-content: space-between; /* Espaça os itens uniformemente */
+    justify-content: flex-start; /* Espaça os itens à esquerda */
     align-items: center; /* Alinha os itens ao centro */
     z-index: 1; /* Define a profundidade do elemento */
     position: relative; /* Posição relativa */
@@ -48,25 +48,32 @@ header {
     color: rgb(198, 55, 55); /* Cor do texto */
     font-size: 18px; /* Tamanho da fonte */
     cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    position: absolute; /* Posição absoluta */
+    left: 15px; /* Posiciona à esquerda */
+    top: 50%; /* Posiciona no centro vertical */
+    transform: translateY(-50%); /* Centraliza verticalmente */
 }
 
 .nav-buttons {
-    display: fixed; /* Define o display como flexbox */
-    align-items: left; /* Alinha os itens ao centro */
-}
+    display: flex;
+    align-items: center;
+    gap: 100px; /* Adicionei essa propriedade para separar os botões */
+    margin-left: auto; /* Move os botões à direita */
+  }  
 
 .nav-buttons button {
     background: none; /* Sem fundo */
     border: none; /* Sem borda */
     color: rgb(8, 8, 8); /* Cor do texto branca */
-    margin: -10rem; /* Margem entre os botões */
     cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
     font-size: 16px; /* Tamanho da fonte */
-    position: relative; /* Posição relativa */
-    justify-content: left;
-    gap: 80px;
-
+    transition: background-color 0.3s ease-in-out;
 }
+
+/* Alinhar os botões horizontalmente */
+.top-bar button {
+    display: inline-block;
+  }
 
 .dropdown-content {
     display: none; /* Esconde o dropdown inicialmente */
@@ -74,7 +81,6 @@ header {
     background-color: white; /* Cor de fundo branca */
     min-width: 160px; /* Largura mínima */
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Sombra para o dropdown */
-    z-index: 1; /* Define a profundidade do elemento */
     top: 30px; /* Posição de 30px do topo */
 }
 
