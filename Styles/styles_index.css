@@ -42,53 +42,87 @@ header {
     position: relative; /* Posição relativa */
 }
 
+/* Define o estilo para o elemento com classe "navbar" */
 .navbar {
+    /* Define o display como flexbox para alinhar os elementos */
     display: flex;
+    /* Alinha os elementos ao centro verticalmente */
     align-items: center;
 }
 
+/* Define o estilo para o elemento com classe "name-btn" */
 .name-btn {
+    /* Define a margem direita como "auto" para empurrar o elemento para a esquerda */
     margin-right: auto;
+    /* Define a cor do texto */
     color: #151514;
+    /* Remove a decoração do texto */
     text-decoration: none;
+    /* Define o tamanho da fonte */
     font-size: 1.2em;
+    /* Transforma o texto em maiúsculas */
     text-transform: uppercase;
+    /* Define o peso da fonte */
     font-weight: 500;
+    /* Define o display como inline-block para permitir que o elemento seja alinhado */
     display: inline-block;
+    /* Define a largura do elemento */
     width: 80px;
+    /* Define a transição para o elemento */
     transition: all 0.2s ease-in-out;
 }
 
+/* Define o estilo para o elemento com classe "name-btn" quando o mouse está sobre ele */
 .name-btn:hover {
+    /* Define a cor do texto quando o mouse está sobre o elemento */
     color: #151512;
 }
 
+/* Define o estilo para o elemento com classe "nav-buttons" */
 .nav-buttons {
+    /* Define o display como flexbox para alinhar os elementos */
     display: flex;
+    /* Alinha os elementos ao centro verticalmente */
     align-items: center;
+    /* Define o espaçamento entre os elementos */
     gap: 100px; /* Adicionei essa propriedade para separar os botões */
 }
 
+/* Define o estilo para os botões dentro do elemento com classe "nav-buttons" */
 .nav-buttons button {
+    /* Remove o fundo do botão */
     background: none; /* Sem fundo */
+    /* Remove a borda do botão */
     border: none; /* Sem borda */
+    /* Define a cor do texto do botão */
     color: #514d4d;
+    /* Define o cursor como um ponteiro quando o mouse está sobre o botão */
     cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    /* Define o tamanho da fonte do botão */
     font-size: 1.2em;
+    /* Transforma o texto do botão em maiúsculas */
     text-transform: uppercase;
+    /* Define o peso da fonte do botão */
     font-weight: 500;
+    /* Define o display como inline-block para permitir que o botão seja alinhado */
     display: inline-block;
+    /* Define a largura do botão */
     width: 80px;
+    /* Define a transição para o botão */
     transition: all 0.2s ease-in-out;
 }
 
+/* Define o estilo para os botões dentro do elemento com classe "nav-buttons" quando o mouse está sobre eles */
 .nav-buttons button:hover {
+    /* Define a cor do texto do botão quando o mouse está sobre ele */
     color: #090909;
 }
-.top-bar button {
-    display: inline-block;
-  }
 
+/* Define o estilo para os botões dentro do elemento com classe "top-bar" */
+.top-bar button {
+    /* Define o display como inline-block para permitir que o botão seja alinhado */
+    display: inline-block;
+}
 .dropdown-content {
     display: none; /* Esconde o dropdown inicialmente */
     position: absolute; /* Posição absoluta */
