@@ -93,7 +93,7 @@ header {
     /* Remove o fundo do botão */
     background: none; /* Sem fundo */
     /* Remove a borda do botão */
-    border: none; /* Sem borda */
+    border: 16px; /* Sem borda */
     /* Define a cor do texto do botão */
     color: #514d4d;
     /* Define o cursor como um ponteiro quando o mouse está sobre o botão */
@@ -107,7 +107,7 @@ header {
     /* Define o display como inline-block para permitir que o botão seja alinhado */
     display: inline-block;
     /* Define a largura do botão */
-    width: 80px;
+    width: 200px;
     /* Define a transição para o botão */
     transition: all 0.2s ease-in-out;
 }
@@ -115,7 +115,7 @@ header {
 /* Define o estilo para os botões dentro do elemento com classe "nav-buttons" quando o mouse está sobre eles */
 .nav-buttons button:hover {
     /* Define a cor do texto do botão quando o mouse está sobre ele */
-    color: #090909;
+    color: #c19797;
 }
 
 /* Define o estilo para os botões dentro do elemento com classe "top-bar" */
