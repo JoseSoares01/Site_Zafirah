@@ -74,7 +74,7 @@ header {
     display: none; /* Esconde o dropdown inicialmente */
     position: absolute; /* Posição absoluta */
     background-color: white; /* Cor de fundo branca */
-    min-width: 160px; /* Largura mínima */
+    min-width: 100px; /* Largura mínima */
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Sombra para o dropdown */
     top: 30px; /* Posição de 30px do topo */
 }
