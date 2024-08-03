@@ -57,7 +57,7 @@ header {
 .nav-buttons {
     display: flex;
     align-items: center;
-    gap: 100px; /* Adicionei essa propriedade para separar os botões */
+    gap: 150px; /* Adicionei essa propriedade para separar os botões */
     margin-left: auto; /* Move os botões à direita */
   }  
 
