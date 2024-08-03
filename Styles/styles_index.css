@@ -11,7 +11,7 @@ body {
     background-size: cover; /* Ajusta a imagem para cobrir todo o fundo jpge */
     display: block; /* Define o display como bloco */
     width: 100%; /* Largura completa */
-    height: 200%; /* Altura fixa */
+    height: 190%; /* Altura fixa */
     position: absolute; /* Posição absoluta */
     z-index: 0; /* Define a profundidade do elemento */
     top: 0; /* Posiciona no topo */
