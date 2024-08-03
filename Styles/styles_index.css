@@ -50,15 +50,15 @@ header {
     cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
     position: absolute; /* Posição absoluta */
     left: 15px; /* Posiciona à esquerda */
-    top: 50%; /* Posiciona no centro vertical */
-    transform: translateY(-50%); /* Centraliza verticalmente */
+    top: 52%; /* Posiciona no centro vertical */
+    transform: translateY(-52%); /* Centraliza verticalmente */
 }
 
 .nav-buttons {
     display: flex;
     align-items: center;
     gap: 100px; /* Adicionei essa propriedade para separar os botões */
-    margin-left: auto; /* Move os botões à direita */
+    margin-left: auto; /* Move os botões à direita de forma automatica */
   }  
 
 .nav-buttons button {
