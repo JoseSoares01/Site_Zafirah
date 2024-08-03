@@ -34,32 +34,28 @@ body {
 header {
     background-color: rgba(255, 255, 255, 0.5); /* Cor de fundo semi-transparente */
     color: rgb(0, 0, 0); /* Cor do texto branca */
-    padding: 15px 650px; /* Espaçamento interno */
+    padding: 15px; /* Espaçamento interno */
     display: flex; /* Define o display como flexbox */
-    justify-content: flex-start; /* Espaça os itens à esquerda */
+    justify-content: space-between; /* Espaça os itens uniformemente */
     align-items: center; /* Alinha os itens ao centro */
     z-index: 1; /* Define a profundidade do elemento */
     position: relative; /* Posição relativa */
 }
 
-.navbar .name-btn {
-    background: none; /* Sem fundo */
-    border: none; /* Sem borda */
-    color: rgb(198, 55, 55); /* Cor do texto */
-    font-size: 18px; /* Tamanho da fonte */
-    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
-    position: absolute; /* Posição absoluta */
-    left: 15px; /* Posiciona à esquerda */
-    top: 50%; /* Posiciona no centro vertical */
-    transform: translateY(-50%); /* Centraliza verticalmente */
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.name-btn {
+    margin-right: auto;
 }
 
 .nav-buttons {
     display: flex;
     align-items: center;
-    gap: 150px; /* Adicionei essa propriedade para separar os botões */
-    margin-left: auto; /* Move os botões à direita */
-  }  
+    gap: 100px; /* Adicionei essa propriedade para separar os botões */
+}
 
 .nav-buttons button {
     background: none; /* Sem fundo */
@@ -67,10 +63,9 @@ header {
     color: rgb(8, 8, 8); /* Cor do texto branca */
     cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
     font-size: 16px; /* Tamanho da fonte */
+    position: relative; /* Posição relativa */
     transition: background-color 0.3s ease-in-out;
 }
-
-/* Alinhar os botões horizontalmente */
 .top-bar button {
     display: inline-block;
   }
