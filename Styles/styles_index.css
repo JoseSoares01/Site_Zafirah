@@ -167,6 +167,7 @@ header {
     margin: 70px 0px; /* Margem superior e inferior */
     padding-bottom: 10px; /* Espaçamento interno inferior */
     display: inline-block; /* Display como bloco inline */
+    transform: translateX(-20px); /* Translada para a esquerda */
 }
 
 .categories__title {
@@ -253,7 +254,7 @@ header {
     position: absolute; /* Posição absoluta */
     top: 0; /* Posiciona no topo */
     left: 0; /* Posiciona na esquerda */
-    right: 0; /* Posiciona na direita */
+    right:0; /* Posiciona na direita */
     bottom: 0; /* Posiciona na base */
 }
 
