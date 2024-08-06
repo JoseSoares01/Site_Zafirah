@@ -7,7 +7,7 @@ body {
 }
 
 .background {
-    background: url('/imagens/black-white-background.jpg') center top no-repeat #8083a3; /* Define a imagem de fundo, posição e cor de fundo */
+    background: url('/imagens/bright-purple-square-mosaic-textural-background.jpg') center top no-repeat #8083a3; /* Define a imagem de fundo, posição e cor de fundo */
     background-size: cover; /* Ajusta a imagem para cobrir todo o fundo jpge */
     display: block; /* Define o display como bloco */
     width: 100%; /* Largura completa */
