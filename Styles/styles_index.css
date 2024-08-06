@@ -153,14 +153,14 @@ header {
 }
 
 .carousel {
-    width: 100%; /* Largura completa */
-    overflow-x: scroll; /* Permite rolagem horizontal */
-    padding: 30px; /* Espaçamento interno */
-    padding-top: 80px; /* Espaçamento superior */
-    position: relative; /* Posição relativa */
-    -webkit-box-sizing: border-box; /* Define o comportamento de box-sizing para bordas no Safari/Chrome */
-    box-sizing: border-box; /* Define o comportamento de box-sizing para bordas em todos os navegadores */
-}
+        width: 100%;
+        padding: 30px;
+        padding-top: 80px;
+        position: relative;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
 
 .carousel__container {
     white-space: nowrap; /* Impede quebra de linha */
